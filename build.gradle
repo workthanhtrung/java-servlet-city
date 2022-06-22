@@ -1,0 +1,23 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.13.Final'
+}
+
+test {
+    useJUnitPlatform()
+}
